@@ -1,0 +1,23 @@
+var script = document.createElement('script');
+script.onload = function () {
+    ComfinoProductWidget.init({
+        widgetKey: 'a649c2f2-ffe0-4c33-b520-ac6c8947b448',
+        priceSelector: 'span.current-price-value',
+        widgetTargetSelector: 'div.block-reassurance',
+        priceObserverSelector: '',
+        priceObserverLevel: 0,
+        type: 'with-modal',
+        offerType: 'INSTALLMENTS_ZERO_PERCENT',
+        embedMethod: 'INSERT_INTO_LAST',
+        numOfInstallments: 0,        
+        price: null,
+        callbackBefore: function () {},
+        callbackAfter: function () {},
+        onOfferRendered: function (jsonResponse, widgetTarget, widgetNode) { },
+        onGetPriceElement: function (priceSelector, priceObserverSelector) { return null; },
+        debugMode: window.location.hash && window.location.hash.substring(1) === 'comfino_debug'
+    });
+};
+script.src = '//widget.comfino.pl/comfino.min.js';
+script.async = true;
+document.getElementsByTagName('head')[0].appendChild(script);

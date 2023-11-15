@@ -1,0 +1,8 @@
+window["ccs_cc_loadQueue"].push({
+"ldn": "ccs_cc_ld_24fd12fff5"
+,
+"inlineScript": "ccs_cc_loge_7d7eb6(\u0027a33e4aa4\u0027);\r\nfunction ccs_cc_gete_params_7d7eb6(id){switch(id){\r\ncase \u0027a33e4aa4\u0027: return { et: \u0027ProductHookLoad\u0027, serverParams: {\"ServerTime\":\"1\",\"ResultCode\":\"12\"} };break;\r\n}}\r\nfunction ccs_cc_loge_7d7eb6(id, clientParams){\r\nvar eventInfo = ccs_cc_gete_params_7d7eb6(id); if(!eventInfo) return;\r\nccs_cc_log.logEvent (eventInfo.et, \u0027SKey=0cc0e5f4\u0026LCID=1045\u0026Market=PL\u0026Locale=PL-POL\u0026ZoneId=24fd12fff5\u0026ZoneVer=7\u0026MfgPn=C13S041569\u0026MasterId=105343fa6e67c176\u0026SMfgName=Epson\u0026SMfgPn=C13S041569\u0026SUpcEan=10343839014\u0026MfgId=17\u0027, eventInfo.serverParams, clientParams); }\r\n\r\n"
+,
+"sites": [
+"cnetcontent.com","cnetcontentcast.com","1worldsync.com","beamer.pro","beamerpro.75040.v.tld.pl","euroavmedia.de","euroavmedia.fr","projection.center","projection.v75040.tld.pl","projektory.pro","spaceone.com.pl","spaceone.store","spaceone24.pl"]
+});

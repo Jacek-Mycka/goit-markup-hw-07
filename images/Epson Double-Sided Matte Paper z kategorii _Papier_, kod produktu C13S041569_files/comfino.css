@@ -1,0 +1,232 @@
+.comfino-widget {
+    max-width: 450px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comfino-widget-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comfino-widget-panel {
+    color: #599e33;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.comfino-widget-panel__value {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.comfino-widget-panel__period {
+    margin-left: 5px;
+}
+
+.comfino-widget-panel__button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask-image: url(/image/comfino/arrow-button.svg);
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url(/image/comfino/arrow-button.svg);
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    background-color: #599e33;
+    padding: 5px 15px;
+}
+
+.comfino-widget-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.comfino-widget-modal-window {
+    position: relative;
+    background-color: #fff;
+    width: 380px;
+    margin: 10% auto;
+    padding: 20px;
+}
+
+.comfino-widget-modal-window.small {
+    width: 30%;
+}
+
+.comfino-widget-modal-window.large {
+    width: 75%;
+}
+
+.comfino-widget-open {
+    display: block;
+}
+
+.comfino-widget-box {
+    color: #777;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.comfino-widget-close-btn {
+    width: 25px;
+    height: 25px;
+    background-color: #599e33;
+    color: #fff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 500;
+    line-height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comfino-widget-header {
+    text-align: center;
+}
+
+.comfino-widget-logo {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.comfino-widget-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0.875rem 0;
+}
+
+.comfino-widget-single-payment {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comfino-widget-single-payment__text {
+    padding-left: 5px;
+    line-height: 49px;
+    display: block;
+}
+
+.comfino-widget-installments-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.comfino-widget-installments-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.comfino-widget-quantity-select {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+}
+
+.comfino-widget-select-box {
+    display: flex;
+}
+
+.comfino-widget-installments-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comfino-widget-installments-quantity {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.comfino-active {
+    background-color: #599e33;
+}
+
+.comfino-widget-installments-quantity__value {
+    padding: 0;
+    margin: 0;
+}
+
+.comfino-widget-summary-box {
+    text-align: center;
+    font-size: .98rem;
+    color: gray;
+}
+
+.comfino-widget-summary-total {
+    padding: .5rem 0;
+}
+
+.comfino-widget-rrso {}
+
+.comfino-widget-footer-link {
+    display: block;
+    text-align: center;
+    padding: .5rem 0;
+    color: gray;
+    font-size: .7rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.comfino-widget-offer-icon {
+    width: 32px;
+}
+
+#comfino-widget-monthly-installment {
+    display: inline;
+}
+
+#comfino-widget-period {
+    display: inline;
+}
+
+.comfino-widget-hint {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-bottom: 3px;
+    color: #fff;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #93c149, #82b949, #71b04a, #60a84a, #509f4a);
+}
+
+.comfino-widget-banner {
+    max-width: 450px;
+}

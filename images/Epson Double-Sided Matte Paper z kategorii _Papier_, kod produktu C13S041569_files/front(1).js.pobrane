@@ -1,0 +1,108 @@
+/**
+ * Product Variants Pro
+ *
+ * @author    Nxtal <support@nxtal.com>
+ * @copyright Nxtal 2023
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ * @version   1.2.0
+ *
+ */
+
+var nxtalvariantspro = {
+	
+	init: function() {
+		var $this = this;
+		$this.setElement();
+		
+		$('body').on('click', '.nxtal-variant .xs-toggle-view', function () {
+			let el = $(this).parent().find('ul');
+			if ('nowrap' == el.css('white-space')) {
+				$(this).text(textMinimalView);
+				el.css('white-space', 'unset');
+			} else {
+				$(this).text(textFullView);
+				el.removeAttr('style');
+			}
+		});
+		
+		$(window).resize(function(){
+			var el = $('body').find('.nxtal-variant-attributes');
+		
+			if (el.width() >= el.find('ul').width()) {
+				el.next('.xs-toggle-view').addClass('hide');
+			} else {
+				el.next('.xs-toggle-view').removeClass('hide');
+			}
+		});
+		
+		$(window).trigger('resize');
+		
+		$(document).ajaxComplete(function(event, xhr) {
+			
+			setTimeout(
+				function() {
+					$this.setElement();
+				},
+				800
+			);
+		});
+		
+		$label = '';
+		$image = '';
+		
+		$('body').on('mouseenter', '.nxtal-variant .nxtal-variant-attributes li', function() {
+			var parent = $(this).parents('.nxtal-variant');
+			
+			if (parent.data('image') == '1') {
+				
+				var coverImage = $('.product-cover img, #bigpic');
+				$image = coverImage.attr('src');
+				
+				coverImage.attr('src', $(this).data('cover'));			
+			}
+			
+			var labelValue = parent.find('.nxtal-variant-label .variant-group-value');
+			$label = labelValue.text();
+			
+			labelValue.text($(this).data('label'));
+
+		});
+		
+		$('body').on('mouseleave', '.nxtal-variant .nxtal-variant-attributes li', function() {
+			
+			var parent = $(this).parents('.nxtal-variant');
+			
+			if (parent.data('image') == '1') {
+				
+				var coverImage = $('.product-cover img, #bigpic');
+				
+				coverImage.attr('src', $image);			
+			}
+			
+			var labelValue = parent.find('.nxtal-variant-label .variant-group-value');
+			
+			labelValue.text($label);
+		});
+		
+		$('body').on('click', '.nxtal-variant .nxtal-variant-label', function(){
+			$(this).parents('.nxtal-variant').toggleClass('closed');
+		});
+	},
+	
+	setElement: function() {
+		
+		$('body').find('.nxtal-variant-box .nxtal-variant').each(function(){
+			$(this).find('.nxtal-variant-label .variant-group-value').text($(this).find('.nxtal-variant-attributes li.active').data('label'));
+			
+			if ($(this).data('image') == '1') {
+				$(this).find('.nxtal-variant-label .variant-group-image').html($(this).find('.nxtal-variant-attributes li.active img').clone());
+			}
+		});
+	}
+}
+
+
+$(function(){
+	nxtalvariantspro.init();
+});
+
