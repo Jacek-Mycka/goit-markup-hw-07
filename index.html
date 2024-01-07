@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,46 +20,124 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header class="page-header">
-      <div class="header-container">
-        <nav class="nav-container">
-          <a href="./index.html" class="logo link"
-            >Web<span class="logo header-logo-color">Studio</span></a
+  <header class="page-header">
+    <div class="header-container">
+      <a href="./index.html" class="logo link"
+      >Web<span class="logo header-logo-color">Studio</span></a
+    >
+    <!-- page navigation -->
+        <!--mobile-menu -->
+        <div class="menu-mobile-devices">
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- menu list for desktop and tablet-->
+      <nav class="nav-container">
+     <ul class="menu">
+      <li class="menu-list">
+        <a href="./index.html" class="link navigation-link link-active"
+          >Studio</a
+        >
+      </li>
+      <li class="menu-list">
+        <a href="./portfolio.html" class="link navigation-link"
+          >Portfolio</a
+        >
+      </li>
+      <li class="menu-list">
+        <a href="" class="link navigation-link">Contacts</a>
+      </li>
+       </ul>
+  </nav>
+  <address>
+    <ul class="contact-list">
+      <li class="contact-item">
+        <a href="mailto:info@devstudio.com" class="contact-link"
+          >info@devstudio.com</a
+        >
+      </li>
+      <li class="contact-item">
+        <a href="tel:+110001111111" class="contact-link"
+          >+11 (000) 111-11-11</a
+        >
+      </li>
+    </ul>
+  </address>
+ </div>
+<!-- mobile menu container -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- menu list for mobile devices -->
+      <nav class="nav-container">
+      <ul class="mobile-menu">
+        <li class="menu-list">
+          <a href="./index.html" class="link navigation-link link-active"
+            >Studio</a
           >
-          <ul class="menu-items">
-            <li class="menu-list">
-              <a href="./index.html" class="link navigation-link link-active"
-                >Studio</a
-              >
-            </li>
-            <li class="menu-list">
-              <a href="./portfolio.html" class="link navigation-link"
-                >Portfolio</a
-              >
-            </li>
-            <li class="menu-list">
-              <a href="" class="link navigation-link">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address>
-          <!-- <ul class="contact-list">
-            <li class="contact-item">
-              <a href="mailto:info@devstudio.com" class="contact-link"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="contact-item">
-              <a href="tel:+110001111111" class="contact-link"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul> -->
-        </address>
-      </div>
-    </header>
-    <main>
+        </li>
+        <li class="menu-list">
+          <a href="./portfolio.html" class="link navigation-link"
+            >Portfolio</a
+          >
+        </li>
+        <li class="menu-list">
+          <a href="" class="link navigation-link">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+      <address>
+        <ul class="mobile-contact-list">
+          <li class="list contact-item">
+            <a href="mailto:info@devstudio.com" class="contact-link"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="list contact-item">
+            <a href="tel:+110001111111" class="contact-link"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+        </ul>
+      </address>
+    </div> 
+ 
+    </div>
+              </header>
+
+  <!-- page content -->
+  </main>
       <!-- Section 1 - Hero -->
       <section class="section section-hero hero">
         <div class="container hero-container">
@@ -350,42 +429,42 @@
           <ul class="list client-logo-list">
             <li class="client-logo">
               <a class="link-to-client" href="">
-                <svg width="168" height="88" class="svg-customer-logo">
+                <svg width="110" height="56" class="svg-customer-logo">
                   <use href="./images/icons.svg#icon-client-1"></use>
                 </svg>
               </a>
             </li>
             <li class="client-logo">
               <a class="link-to-client" href="">
-                <svg width="168" height="88" class="svg-customer-logo">
+                <svg width="110" height="56" class="svg-customer-logo">
                   <use href="./images/icons.svg#icon-client-2"></use>
                 </svg>
               </a>
             </li>
             <li class="client-logo">
               <a class="link-to-client" href="">
-                <svg width="168" height="88" class="svg-customer-logo">
+                <svg width="110" height="56" class="svg-customer-logo">
                   <use href="./images/icons.svg#icon-client-3"></use>
                 </svg>
               </a>
             </li>
             <li class="client-logo">
               <a class="link-to-client" href="">
-                <svg width="168" height="88" class="svg-customer-logo">
+                <svg width="110" height="56" class="svg-customer-logo">
                   <use href="./images/icons.svg#icon-client-4"></use>
                 </svg>
               </a>
             </li>
             <li class="client-logo">
               <a class="link-to-client" href="">
-                <svg width="168" height="88" class="svg-customer-logo">
+                <svg width="110" height="56" class="svg-customer-logo">
                   <use href="./images/icons.svg#icon-client-5"></use>
                 </svg>
               </a>
             </li>
             <li class="client-logo">
               <a class="link-to-client" href="">
-                <svg width="168" height="88" class="svg-customer-logo">
+                <svg width="110" height="56" class="svg-customer-logo">
                   <use href="./images/icons.svg#icon-client-6"></use>
                 </svg>
               </a>
@@ -395,8 +474,10 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer-attributes">
+        
+
+    <!-- footer -->
+    <footer class="section">
       <div class="container footer-container">
         <div class="footer-logo-and-description">
           <a href="./index.html" class="logo link footer-link"
@@ -408,7 +489,7 @@
           </p>
         </div>
 
-        <!-- Footer - Social media icons -->
+        <!-- footer - Social media icons -->
         <div class="footer-social-media-container">
           <p class="footer-social-media-icons-header">Social media</p>
           <ul class="footer-social-media-list">
@@ -443,7 +524,7 @@
           </ul>
         </div>
 
-        <!-- Footer form -->
+        <!-- footer form -->
         <div class="div-footer-three">
           <p class="footer-form-header">Subscribe</p>
           <form class="footer-form">
@@ -466,7 +547,7 @@
       </div>
     </footer>
 
-    <!-- Modal Window -->
+    <!-- modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-container">
         <button type="button" class="close-btn" data-modal-close>
@@ -555,7 +636,18 @@
         </form>
       </div>
     </div>
-    <!-- Modal window - script  -->
-    <script src="./js/modal.js"></script>
+    
+         <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+
+    <!-- mobile menu js -->
+  <script defer src="js/mobile-menu.js"></script>
+
+  <!-- modal mindow js -->
+  <script src="./js/modal.js"></script>
   </body>
 </html>
